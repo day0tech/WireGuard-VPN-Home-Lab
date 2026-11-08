@@ -11,7 +11,7 @@ The project involved configuring WireGuard peers, public/private key authenticat
 
 ## Project Documentation
 
-- [01 – WireGuard Overview](docs/01-WireGuard-Overview.md)  - A look a what Wireguard is.
+- [01 – WireGuard Overview](docs/01-WireGuard-Overview.md)  - A look at what services and configuartions will be used.
 - [02 – OPNsense Server Setup](docs/02-OPNsense-Server-Setup.md)  - Deploy a WireGuard VPN server on OPNsense.
 - [03 – Linux Client Setup](docs/03-Linux-Client-Setup.md)  - Configure a CachyOS Linux laptop as a WireGuard client.
 - [04 – Split-Tunnel Configuration](docs/04-Split-Tunnel-Configuration.md)  - Implement split tunneling for remote access to the home LAN.
