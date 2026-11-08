@@ -11,21 +11,14 @@ The project involved configuring WireGuard peers, public/private key authenticat
 
 ## Project Documentation
 
-- [01 – WireGuard Overview](docs/01-WireGuard-Overview.md)
-- [02 – OPNsense Server Setup](docs/02-OPNsense-Server-Setup.md)
-- [03 – Linux Client Setup](docs/03-Linux-Client-Setup.md)
-- [04 – Split-Tunnel Configuration](docs/04-Split-Tunnel-Configuration.md)
-- [05 – Full-Tunnel Configuration](docs/05-Full-Tunnel-Configuration.md)
-- [06 – Troubleshooting and Testing](docs/06-Troubleshooting-and-Testing.md)
+- [01 – WireGuard Overview](docs/01-WireGuard-Overview.md)  - A look a what Wireguard is.
+- [02 – OPNsense Server Setup](docs/02-OPNsense-Server-Setup.md)  - Deploy a WireGuard VPN server on OPNsense.
+- [03 – Linux Client Setup](docs/03-Linux-Client-Setup.md)  - Configure a CachyOS Linux laptop as a WireGuard client.
+- [04 – Split-Tunnel Configuration](docs/04-Split-Tunnel-Configuration.md)  - Implement split tunneling for remote access to the home LAN.
+- [05 – Full-Tunnel Configuration](docs/05-Full-Tunnel-Configuration.md)  - Implement full tunneling to route internet traffic through the home firewall.
+- [06 – Troubleshooting and Testing](docs/06-Troubleshooting-and-Testing.md)  - Troubleshoot VPN handshakes, routing issues, and DNS connectivity.
 
 ---
-- Deploy a WireGuard VPN server on OPNsense.
-- Configure a CachyOS Linux laptop as a WireGuard client.
-- Implement split tunneling for remote access to the home LAN.
-- Implement full tunneling to route internet traffic through the home firewall.
-- Configure firewall rules and outbound NAT for VPN connectivity.
-- Troubleshoot VPN handshakes, routing issues, and DNS connectivity.
-- Verify VPN operation using Linux networking tools.
 
 ## Technologies Used
 
