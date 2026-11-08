@@ -11,11 +11,11 @@ The project involved configuring WireGuard peers, public/private key authenticat
 
 ## Project Documentation
 
-[01 – WireGuard Overview](docs/01-WireGuard-Overview.md) |
-[02 – OPNsense Server Setup](docs/02-OPNsense-Server-Setup.md) |
-[03 – Linux Client Setup](docs/03-Linux-Client-Setup.md) |
-[04 – Split-Tunnel Configuration](docs/04-Split-Tunnel-Configuration.md) |
-[05 – Full-Tunnel Configuration](docs/05-Full-Tunnel-Configuration.md) |
+[01 – WireGuard Overview](docs/01-WireGuard-Overview.md) 
+[02 – OPNsense Server Setup](docs/02-OPNsense-Server-Setup.md) 
+[03 – Linux Client Setup](docs/03-Linux-Client-Setup.md) 
+[04 – Split-Tunnel Configuration](docs/04-Split-Tunnel-Configuration.md) 
+[05 – Full-Tunnel Configuration](docs/05-Full-Tunnel-Configuration.md) 
 [06 – Troubleshooting and Testing](docs/06-Troubleshooting-and-Testing.md)
 
 ---
