@@ -27,13 +27,9 @@ The WireGuard client configuration is stored at:
 
 The configuration uses the following settings, with sensitive information replaced by placeholders.
 
-```ini
+### Configuration Screenshot
 <img src="../screenshots/SplitTunnelConfig(1).png" width="450">
 ```
-
-### Configuration Screenshot
-
-![CachyOS Split-Tunnel Configuration](../screenshots/SplitTunnelConfig.png)
 
 ## 4. Understanding AllowedIPs
 
@@ -66,7 +62,7 @@ A successful connection should display a recent handshake with the OPNsense Wire
 
 ### WireGuard Handshake Screenshot
 
-![WireGuard Split-Tunnel Handshake](../screenshots/SplitTunnel-Handshake.png)
+<img src="../screenshots/SplitTunnel-Handshake.png" width="450">
 
 ## 6. Testing Connectivity
 
