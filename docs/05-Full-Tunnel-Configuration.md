@@ -71,7 +71,7 @@ The rules included:
 
 ### Firewall Screenshot
 
-<img src="../screenshots/FullTunnel-Firewall-Rules.png" width="450">
+<img src="../screenshots/DNSRule.png" width="450">     <img src="../screenshots/ICMPRule.png" width="450">
 
 ## 5. Outbound NAT Configuration
 
