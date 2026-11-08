@@ -28,15 +28,7 @@ The WireGuard client configuration is stored at:
 The configuration uses the following settings, with sensitive information replaced by placeholders.
 
 ```ini
-[Interface]
-PrivateKey = <Linux-Client-Private-Key>
-Address = 10.10.10.2/32
-
-[Peer]
-PublicKey = <OPNsense-WireGuard-Public-Key>
-Endpoint = <Home-Public-IP>:51820
-AllowedIPs = 10.10.10.0/24, 192.168.1.0/24
-PersistentKeepalive = 25
+<img src="../screenshots/SplitTunnelConfig(1).png" width="450">
 ```
 
 ### Configuration Screenshot
@@ -83,20 +75,20 @@ A successful connection should display a recent handshake with the OPNsense Wire
 ```bash
 ping -c 4 10.10.10.1
 ```
+<img src="../screenshots/1ping.png" width="450">
 
 This checks whether the CachyOS client can communicate with the OPNsense WireGuard interface.
 
-![Split-Tunnel Ping Test](../screenshots/SplitTunnel-Ping.png)
 
 ### Test 2 – Verify Routing to the Home LAN
 
 ```bash
 ip route get 192.168.1.1
 ```
+<img src="../screenshots/iprouteget.png" width="450">
 
 The output should show that traffic destined for the home LAN is routed through `wg0`.
 
-![Split-Tunnel Routing Test](../screenshots/SplitTunnel-Routing.png)
 
 ### Test 3 – Verify Internet Traffic Uses the Normal Connection
 
