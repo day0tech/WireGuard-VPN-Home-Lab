@@ -8,8 +8,17 @@ The aim was to establish secure remote access to my home network and configure t
 
 The project involved configuring WireGuard peers, public/private key authentication, firewall rules, routing, outbound NAT, and DNS services.
 
-## Project Objectives
 
+## Project Documentation
+
+[01 – WireGuard Overview](docs/01-WireGuard-Overview.md) |
+[02 – OPNsense Server Setup](docs/02-OPNsense-Server-Setup.md) |
+[03 – Linux Client Setup](docs/03-Linux-Client-Setup.md) |
+[04 – Split-Tunnel Configuration](docs/04-Split-Tunnel-Configuration.md) |
+[05 – Full-Tunnel Configuration](docs/05-Full-Tunnel-Configuration.md) |
+[06 – Troubleshooting and Testing](docs/06-Troubleshooting-and-Testing.md)
+
+---
 - Deploy a WireGuard VPN server on OPNsense.
 - Configure a CachyOS Linux laptop as a WireGuard client.
 - Implement split tunneling for remote access to the home LAN.
