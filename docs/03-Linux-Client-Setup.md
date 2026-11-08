@@ -82,6 +82,7 @@ sudo nano /etc/wireguard/wg0.conf
 ```
 
 The following configuration was used for the split-tunnel connection:
+<img src="../screenshots/SplitTunnelConfig.png" width="600">
 
 ```ini
 [Interface]
