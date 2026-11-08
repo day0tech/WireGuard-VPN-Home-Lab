@@ -38,8 +38,8 @@ A peer was created for the CachyOS laptop.
 
 | Setting | Configuration |
 |---|---|
-| Enabled | Yes |
-| Name | CachyOS |
+| Enabled | Yes |                    ### CachyOS WireGuard Peer
+| Name | CachyOS |                  <img src="../screenshots/PeerLinux.png" width="500">
 | Public Key | Linux public key |
 | Allowed IPs | 10.10.10.2/32 |
 | Endpoint Address | Blank |
