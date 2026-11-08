@@ -14,30 +14,27 @@ Navigate to:
 
 **VPN → WireGuard → Instances**
 
+
 <table>
-  <tr>
-    <td valign="top">
-
-      <strong>WireGuard Instance Configuration</strong>
-
-      <table>
-        <tr><th>Setting</th><th>Configuration</th></tr>
-        <tr><td>Enabled</td><td>Yes</td></tr>
-        <tr><td>Name</td><td>HomeVPN</td></tr>
-        <tr><td>Listen Port</td><td>51820/UDP</td></tr>
-        <tr><td>Tunnel Address</td><td>10.10.10.1/24</td></tr>
-        <tr><td>Peers</td><td>CachyOS</td></tr>
-        <tr><td>Disable Routes</td><td>No</td></tr>
-      </table>
-
-    </td>
-    <td valign="top">
-
-      <img src="../screenshots/Instance.png" width="450">
-
-    </td>
-  </tr>
+<tr>
+<td valign="top">
+<strong>WireGuard Instance Configuration</strong>
+<table>
+<tr><th>Setting</th><th>Configuration</th></tr>
+<tr><td>Enabled</td><td>Yes</td></tr>
+<tr><td>Name</td><td>HomeVPN</td></tr>
+<tr><td>Listen Port</td><td>51820/UDP</td></tr>
+<tr><td>Tunnel Address</td><td>10.10.10.1/24</td></tr>
+<tr><td>Peers</td><td>CachyOS</td></tr>
+<tr><td>Disable Routes</td><td>No</td></tr>
 </table>
+</td>
+<td valign="top">
+<img src="../screenshots/Instance.png" width="450">
+</td>
+</tr>
+</table>
+
 
 
 The instance was saved and enabled.
