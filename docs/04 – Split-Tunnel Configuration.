@@ -1,0 +1,129 @@
+# 04 – Split-Tunnel Configuration
+
+## 1. Overview
+
+Split tunneling allows selected network traffic to travel through the WireGuard VPN while other internet traffic continues through the client's normal internet connection.
+
+For this home lab, I configured split tunneling on my CachyOS Linux laptop to provide secure remote access to my home network through the OPNsense firewall.
+
+The objective was to access internal devices and the OPNsense management interface remotely without sending all internet traffic through the VPN.
+
+## 2. Network Configuration
+
+| Component | IP Address / Network |
+|---|---|
+| OPNsense LAN | `192.168.1.1/24` |
+| Home LAN | `192.168.1.0/24` |
+| WireGuard VPN network | `10.10.10.0/24` |
+| OPNsense WireGuard interface | `10.10.10.1` |
+| CachyOS WireGuard client | `10.10.10.2/32` |
+| WireGuard port | `51820/UDP` |
+
+## 3. CachyOS Split-Tunnel Configuration
+
+The WireGuard client configuration is stored at:
+
+`/etc/wireguard/wg0.conf`
+
+The configuration uses the following settings, with sensitive information replaced by placeholders.
+
+```ini
+[Interface]
+PrivateKey = <Linux-Client-Private-Key>
+Address = 10.10.10.2/32
+
+[Peer]
+PublicKey = <OPNsense-WireGuard-Public-Key>
+Endpoint = <Home-Public-IP>:51820
+AllowedIPs = 10.10.10.0/24, 192.168.1.0/24
+PersistentKeepalive = 25
+```
+
+### Configuration Screenshot
+
+![CachyOS Split-Tunnel Configuration](../screenshots/SplitTunnelConfig.png)
+
+## 4. Understanding AllowedIPs
+
+The following setting determines which destination networks are routed through the VPN:
+
+`AllowedIPs = 10.10.10.0/24, 192.168.1.0/24`
+
+- `10.10.10.0/24` – Allows communication with devices on the WireGuard VPN network.
+- `192.168.1.0/24` – Routes traffic destined for the home LAN through the VPN.
+
+Other internet traffic continues to use the laptop's normal network connection.
+
+This provides remote access to the home network without requiring a full-tunnel VPN.
+
+## 5. Starting the VPN
+
+To activate the split-tunnel connection:
+
+```bash
+sudo wg-quick up wg0
+```
+
+To check the connection status:
+
+```bash
+sudo wg show
+```
+
+A successful connection should display a recent handshake with the OPNsense WireGuard peer.
+
+### WireGuard Handshake Screenshot
+
+![WireGuard Split-Tunnel Handshake](../screenshots/SplitTunnel-Handshake.png)
+
+## 6. Testing Connectivity
+
+### Test 1 – Ping the OPNsense WireGuard Interface
+
+```bash
+ping -c 4 10.10.10.1
+```
+
+This checks whether the CachyOS client can communicate with the OPNsense WireGuard interface.
+
+![Split-Tunnel Ping Test](../screenshots/SplitTunnel-Ping.png)
+
+### Test 2 – Verify Routing to the Home LAN
+
+```bash
+ip route get 192.168.1.1
+```
+
+The output should show that traffic destined for the home LAN is routed through `wg0`.
+
+![Split-Tunnel Routing Test](../screenshots/SplitTunnel-Routing.png)
+
+### Test 3 – Verify Internet Traffic Uses the Normal Connection
+
+```bash
+curl -4 https://ifconfig.me
+```
+
+When tested from an external network, the displayed public IPv4 address should match the external network's public address rather than the home connection.
+
+This confirms that general IPv4 internet traffic is not being routed through the VPN.
+
+## 7. Disconnecting the VPN
+
+To stop the split-tunnel connection:
+
+```bash
+sudo wg-quick down wg0
+```
+
+This removes the WireGuard interface and its associated routes.
+
+## 8. Results
+
+The split-tunnel configuration was successfully tested from an external Wi-Fi network.
+
+The CachyOS laptop established a WireGuard handshake with the OPNsense server and was able to communicate with devices on the home network.
+
+The configuration allowed remote access to internal resources while keeping general internet traffic outside the VPN tunnel.
+
+This demonstrated the practical use of WireGuard for secure remote network access.
