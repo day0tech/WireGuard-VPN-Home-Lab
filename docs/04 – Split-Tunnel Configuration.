@@ -28,6 +28,7 @@ The WireGuard client configuration is stored at:
 The configuration uses the following settings, with sensitive information replaced by placeholders.
 
 ### Configuration Screenshot
+
 <img src="../screenshots/SplitTunnelConfig.png" width="450">
 ```
 
@@ -71,6 +72,8 @@ A successful connection should display a recent handshake with the OPNsense Wire
 ```bash
 ping -c 4 10.10.10.1
 ```
+### Ping Test Screenshot
+
 <img src="../screenshots/1ping.png" width="450">
 
 This checks whether the CachyOS client can communicate with the OPNsense WireGuard interface.
@@ -81,6 +84,8 @@ This checks whether the CachyOS client can communicate with the OPNsense WireGua
 ```bash
 ip route get 192.168.1.1
 ```
+### Routing Test Screenshot
+
 <img src="../screenshots/iprouteget.png" width="450">
 
 The output should show that traffic destined for the home LAN is routed through `wg0`.
