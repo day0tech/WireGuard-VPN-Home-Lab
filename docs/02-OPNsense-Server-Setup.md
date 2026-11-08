@@ -34,17 +34,31 @@ Navigate to:
 
 **VPN → WireGuard → Peers**
 
-A peer was created for the CachyOS laptop.
+<table>
+<tr>
+<td valign="top">
 
-| Setting | Configuration |
-|---|---|
-| Enabled | Yes |                    ### CachyOS WireGuard Peer
-| Name | CachyOS |                  <img src="../screenshots/PeerLinux.png" width="500">
-| Public Key | Linux public key |
-| Allowed IPs | 10.10.10.2/32 |
-| Endpoint Address | Blank |
-| Endpoint Port | Blank |
-| Instance | HomeVPN |
+<strong>Peer Configuration</strong>
+
+<table>
+<tr><th>Setting</th><th>Configuration</th></tr>
+<tr><td>Enabled</td><td>Yes</td></tr>
+<tr><td>Name</td><td>CachyOS</td></tr>
+<tr><td>Public Key</td><td>Linux public key</td></tr>
+<tr><td>Allowed IPs</td><td>10.10.10.2/32</td></tr>
+<tr><td>Endpoint Address</td><td>Blank</td></tr>
+<tr><td>Endpoint Port</td><td>Blank</td></tr>
+<tr><td>Instance</td><td>HomeVPN</td></tr>
+</table>
+
+</td>
+<td valign="top">
+
+<img src="../screenshots/PeerLinux.png" width="450">
+
+</td>
+</tr>
+</table>
 
 The peer was associated with the HomeVPN instance.
 
