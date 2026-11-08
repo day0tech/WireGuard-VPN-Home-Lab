@@ -28,7 +28,7 @@ The WireGuard client configuration is stored at:
 The configuration uses the following settings, with sensitive information replaced by placeholders.
 
 ### Configuration Screenshot
-<img src="../screenshots/SplitTunnelConfig(1).png" width="450">
+<img src="../screenshots/SplitTunnelConfig.png" width="450">
 ```
 
 ## 4. Understanding AllowedIPs
